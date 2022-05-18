@@ -3,5 +3,11 @@ module.exports = defineConfig({
   transpileDependencies: true [
     'vuetify'
   ],
-  lintOnSave:false
+
+  lintOnSave:false,
+
+  pwa: {
+    name: 'Dev MeetUp',
+    themeColor: '#D01600'
+  }
 })
