@@ -3,11 +3,12 @@
     
     <v-main >
     <v-app-bar >
-     <v-app-bar-nav-icon @click.native.stop="drawer = !drawer"></v-app-bar-nav-icon>  
+     <v-app-bar-nav-icon @click.native.stop="drawer = !drawer"
+     class="hidden-sm-and-up"></v-app-bar-nav-icon>  
       <v-toolbar-title>DevMeetUp</v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <v-toolbar-item>
+      <v-toolbar-item class="hidden-xs-only">
       <!---need to add MeetUps Icon -->
         <v-btn text><v-icon>mdi-account-supervisor</v-icon>View MeetUps</v-btn>
       </v-toolbar-item>
