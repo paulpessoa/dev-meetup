@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" absolute bottom temporary>
           <v-list nav dense>
             <v-list-item-group v-model="group">
-              <v-list-item v-for="item in menuItems" :key="item.title">
+              <v-list-item v-for="item in menuItems" :key="item.title" router :to="item.link">
                 <v-list-item-title >
                   <v-list-tile-action >
                     <v-icon>{{ item.icon }}</v-icon></v-list-tile-action>
@@ -25,16 +25,23 @@
               @click.native.stop="drawer = !drawer"
               class="hidden-md-and-up"
             ></v-app-bar-nav-icon>
-            <v-toolbar-title>DevMeetUp</v-toolbar-title>
+
+            <v-toolbar-title>
+              <router-link to="/" tag="span" style="cursor: pointer">DevMeetUp</router-link>
+            </v-toolbar-title>
 
             <v-spacer></v-spacer>
             <v-toolbar-item class="hidden-sm-and-down">
               <!---need to add MeetUps Icon -->
-              <v-btn text v-for="item in menuItems" :key="item.title">
+              <v-btn text v-for="item in menuItems" :key="item.title" router :to="item.link">
               <v-icon>{{item.icon}}</v-icon> {{item.title}}</v-btn
               >
             </v-toolbar-item>
           </v-app-bar>
+
+
+            <router-view></router-view>
+
         </v-main>
 
   
@@ -48,11 +55,11 @@ export default {
       drawer: false,
       group: null,
       menuItems: [
-        { icon: "mdi-account-supervisor", title: "View Meetups" },
-        { icon: "mdi-map-marker", title: "Organize Meetups" },
-        { icon: "mdi-account-circle", title: "Profile" },
-        { icon: "mdi-account-cog", title: "Sign up" },
-        { icon: "mdi-account-lock", title: "Sign in" },
+        { icon: "mdi-account-supervisor", title: "View Meetups", link: "/meetup"},
+        { icon: "mdi-map-marker", title: "Organize Meetups", link: "/createmeetup"},
+        { icon: "mdi-account-circle", title: "Profile", link: "/profile"},
+        { icon: "mdi-account-cog", title: "Sign up", link: "/signup"},
+        { icon: "mdi-account-lock", title: "Sign in", link: "/signin"},
       ],
     };
   },
