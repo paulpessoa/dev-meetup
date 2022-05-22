@@ -28,11 +28,13 @@
           </v-carousel>
       </v-flex>
     </v-layout>
+
     <v-layout row wrap class="mt-6">
       <v-flex xs12 class="text-center">
-        <p>Join our awesome meetups</p>
+        <p>Join our awesome meetups!</p>
       </v-flex>
     </v-layout>
+
  </v-container>
 
 
