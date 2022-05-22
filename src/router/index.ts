@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../components/Home.vue'
+import Home from '../components/HomePage.vue'
 import CreateMeetup from '../components/Meetup/CreateMeetup.vue'
 import Meetup from '../components/Meetup/Meetup.vue'
 import Profile from '../components/User/Profile.vue'
