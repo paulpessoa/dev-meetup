@@ -1,7 +1,7 @@
 <template>
  <v-container>
 
-    <v-layout row wrap >
+    <v-layout row wrap>
 
       <v-flex xs12 sm6 class="text-center text-sm-right">
         <v-btn large router style="margin: 10px;" to="/meetup">Explore Meetups</v-btn>
@@ -73,12 +73,14 @@
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
   .title {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
     color: white;
     padding: 20px;
     text-align: center;
+    width: 100%;
   }
 </style>

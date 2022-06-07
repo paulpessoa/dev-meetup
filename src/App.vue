@@ -1,9 +1,9 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer v-model="drawer" absolute bottom temporary>
+    <v-navigation-drawer v-model="sideBar" absolute bottom temporary>
           <v-list nav dense>
             <v-list-item-group v-model="group">
-              <v-list-item v-for="item in menuItems" :key="item.title" router :to="item.link">
+              <v-list-item v-for="item in menuItems" :key="item.title" :to="item.link">
                 <v-list-item-title >
                   <v-list-tile-action >
                     <v-icon>{{ item.icon }}</v-icon></v-list-tile-action>
@@ -22,7 +22,7 @@
         <v-main>
           <v-app-bar dark class="cyan darken-4">
             <v-app-bar-nav-icon
-              @click.native.stop="drawer = !drawer"
+              @click.stop="sideBar = !sideBar"
               class="hidden-md-and-up"
             ></v-app-bar-nav-icon>
 
@@ -52,7 +52,7 @@
 export default {
   data: () => {
     return {
-      drawer: false,
+      sideBar: false,
       group: null,
       menuItems: [
         { icon: "mdi-account-supervisor", title: "View Meetups", link: "/meetup"},
