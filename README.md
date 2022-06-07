@@ -39,6 +39,11 @@
 npm install -D sass-loader sass
 ```
 
+## Install VUEX
+```
+npm install Vuex
+```
+
 ## Project setup
 ```
 npm install
