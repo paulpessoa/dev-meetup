@@ -40,6 +40,17 @@
 
 </template>
 
+<style scoped lang="scss">
+  .title {
+    position: absolute;
+    bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+</style>
 
 <script lang="ts">
   export default {
@@ -71,16 +82,3 @@
     },
   }
 </script>
-
-
-<style scoped lang="scss">
-  .title {
-    position: absolute;
-    bottom: 50px;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-  }
-</style>
