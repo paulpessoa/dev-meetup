@@ -55,8 +55,8 @@ export default {
       sideBar: false,
       group: null,
       menuItems: [
-        { icon: "mdi-account-supervisor", title: "View Meetups", link: "/meetup"},
-        { icon: "mdi-map-marker", title: "Organize Meetups", link: "/createmeetup"},
+        { icon: "mdi-account-supervisor", title: "View Meetups", link: "/meetups"},
+        { icon: "mdi-map-marker", title: "Organize Meetups", link: "/meetups/new-meetup"},
         { icon: "mdi-account-circle", title: "Profile", link: "/profile"},
         { icon: "mdi-account-cog", title: "Sign up", link: "/signup"},
         { icon: "mdi-account-lock", title: "Sign in", link: "/signin"},

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../components/HomePage.vue'
-import CreateMeetup from '../components/Meetup/CreateMeetup.vue'
-import Meetup from '../components/Meetup/Meetup.vue'
+import NewMeetup from '../components/Meetups/NewMeetup.vue'
+import MeetupList from '../components/Meetups/MeetupList.vue'
+import MeetupSingle from '../components/Meetups/MeetupSingle.vue'
 import Profile from '../components/User/Profile.vue'
 import Signin from '../components/User/Signin.vue'
 import Signup from '../components/User/signup.vue'
@@ -16,14 +17,19 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
-    path: '/createmeetup',
-    name: 'createmeetup',
-    component: CreateMeetup
+    path: '/meetups',
+    name: 'MeetupList',
+    component: MeetupList
   },
   {
-    path: '/meetup',
-    name: 'Meetup',
-    component: Meetup
+    path: 'meetups/new-meetup',
+    name: 'NewMeetup',
+    component: NewMeetup
+  },
+  {
+    path: '/meetups/:id',
+    name: 'MeetupSingle',
+    component: MeetupSingle
   },
   {
     path: '/profile',

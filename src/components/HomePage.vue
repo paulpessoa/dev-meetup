@@ -4,10 +4,14 @@
     <v-layout row wrap>
 
       <v-flex xs12 sm6 class="text-center text-sm-right">
-        <v-btn large router style="margin: 10px;" to="/meetup">Explore Meetups</v-btn>
+        <v-btn class="primary ma-2" router to="/meetups">
+          <v-icon left light>mdi-calendar-search</v-icon>Explore Meetups
+        </v-btn>
       </v-flex>
       <v-flex xs12 sm6 class="text-center text-sm-left">
-        <v-btn large router style="margin: 10px;" to="/createmeetup">Organize Meetups</v-btn>
+        <v-btn class="primary ma-2" router to="/meetups/new-meetup">
+          <v-icon left light>mdi-calendar-edit</v-icon>Organize a Meetup
+        </v-btn>
       </v-flex>
 
     </v-layout>
@@ -19,6 +23,7 @@
               v-for="(meetup,i) in meetups"
               :key="i"
               :src="meetup.src"
+              :to="`/meetups/${meetup.id}`"
               reverse-transition="fade-transition"
               transition="fade-transition">
                 <div class="title">
@@ -53,32 +58,34 @@
 </style>
 
 <script lang="ts">
+
   export default {
     data () {
       return {
         meetups: [
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-            id: 'askjdhaksjdhasdh',
+            id: '1',
             title: 'Title 01'
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-            id: 'askjdhaksjdssdh',
+            id: '2',
             title: 'Title 02'
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-            id: 'askjdhaksjdakidh',
+            id: '3',
             title: 'Title 03'
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-            id: 'askjdhaksjghgdh',
+            id: '4',
             title: 'Title 04'
           },
         ],
       }
     },
+  
   }
 </script>
