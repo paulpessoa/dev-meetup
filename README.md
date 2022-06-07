@@ -34,6 +34,10 @@
 
 
 
+## Install SASS
+```
+npm install -D sass-loader sass
+```
 
 ## Project setup
 ```
