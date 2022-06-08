@@ -34,3 +34,12 @@
     </v-layout>
   </v-container>
 </template>
+
+
+<script lang="ts">
+  export default {
+    computed: {
+
+    }
+  }
+</script>

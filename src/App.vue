@@ -1,20 +1,15 @@
 <template>
-  <v-app dark>
+  <v-app dark >
     <v-navigation-drawer v-model="sideBar" absolute bottom temporary>
           <v-list nav dense>
             <v-list-item-group v-model="group">
               <v-list-item v-for="item in menuItems" :key="item.title" :to="item.link">
                 <v-list-item-title >
-                  <v-list-tile-action >
-                    <v-icon>{{ item.icon }}</v-icon></v-list-tile-action>
+                  <v-list-tile-action>
+                    <v-icon small left>{{ item.icon }}</v-icon></v-list-tile-action>
                   <v-list-tile-content> {{ item.title}} </v-list-tile-content>
                 </v-list-item-title>
               </v-list-item>
-              <!--
-              <v-list-item>
-                <v-list-item-title>Buzz</v-list-item-title>
-              </v-list-item>
-              -->
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -34,16 +29,12 @@
             <v-toolbar-item class="hidden-sm-and-down">
               <!---need to add MeetUps Icon -->
               <v-btn text v-for="item in menuItems" :key="item.title" router :to="item.link">
-              <v-icon>{{item.icon}}</v-icon> {{item.title}}</v-btn
+              <v-icon small left>{{item.icon}}</v-icon> {{item.title}}</v-btn
               >
             </v-toolbar-item>
           </v-app-bar>
-
-
-            <router-view></router-view>
-
+            <router-view xs12 sm12 md12 ></router-view>
         </v-main>
-
   
   </v-app>
 </template>

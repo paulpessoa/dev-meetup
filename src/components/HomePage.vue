@@ -22,7 +22,7 @@
             <v-carousel-item 
               v-for="(meetup,i) in meetups"
               :key="i"
-              :src="meetup.src"
+              :src="meetup.imageUrl"
               :to="`/meetups/${meetup.id}`"
               reverse-transition="fade-transition"
               transition="fade-transition">
@@ -64,22 +64,22 @@
       return {
         meetups: [
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            imageUrl: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
             id: '1',
             title: 'Title 01'
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            imageUrl: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
             id: '2',
             title: 'Title 02'
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            imageUrl: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
             id: '3',
             title: 'Title 03'
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            imageUrl: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
             id: '4',
             title: 'Title 04'
           },
